@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">UASPADS</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string-array name="status_options">
+        <item>New</item>
+        <item>In progress</item>
+        <item>Done</item>
+    </string-array>
+    <string-array name="urgency_options">
+        <item>Normal</item>
+        <item>Urgent</item>
+        <item>Important</item>
+    </string-array>
+</resources>

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/Fragmenthome">
+
+    <fragment
+        android:id="@+id/fragmentcreate"
+        android:name="com.example.uaspads.Fragmentcreate"
+        android:label="FragmentCreate" />
+    <action
+        android:id="@+id/action_fragmentcreate_to_fragmenthome"
+        app:destination="@id/Fragmenthome" />
+
+    <fragment
+        android:id="@+id/Fragmenthome"
+        android:name="com.example.uaspads.Fragmenthome"
+        android:label="Fragmenthome">
+
+        <action
+            android:id="@+id/action_fragmenthome_to_fragmentcreate"
+            app:destination="@id/fragmentcreate" />
+        <action
+            android:id="@+id/action_fragmenthome_to_fragmentnew"
+            app:destination="@id/Fragmentnew" />
+        <action
+            android:id="@+id/action_fragmenthome_to_fragmentprogress"
+            app:destination="@id/Fragmentprogress" />
+
+        <action
+            android:id="@+id/action_fragmenthome_to_fragmentdone"
+            app:destination="@id/Fragmentdone" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/Fragmentnew"
+        android:name="com.example.uaspads.Fragmentnew"
+        android:label="Fragmentnew">
+
+        <action
+            android:id="@+id/action_fragmentnew_to_fragmentaction"
+            app:destination="@id/fragmentaction">
+            <argument
+                android:name="taskId"
+                app:argType="integer" />
+        </action>
+
+        <action
+            android:id="@+id/action_fragmentnew_to_fragmenthome"
+            app:destination="@id/Fragmenthome">
+        </action>
+    </fragment>
+
+    <fragment
+        android:id="@+id/Fragmentprogress"
+        android:name="com.example.uaspads.Fragmentprogress"
+        android:label="Fragmentprogress">
+        <action
+            android:id="@+id/action_fragmentprogress_to_fragmentaction"
+            app:destination="@id/fragmentaction">
+            <argument
+                android:name="taskId"
+                app:argType="integer" />
+        </action>
+        <action
+            android:id="@+id/action_fragmentprogress_to_fragmenthome"
+            app:destination="@id/Fragmenthome">
+        </action>
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragmentaction"
+        android:name="com.example.uaspads.Fragmentaction"
+        android:label="Fragmentaction">
+        <!-- Define any necessary arguments for this destination fragment -->
+        <action
+            android:id="@+id/action_fragmentaction_to_fragmenthome"
+            app:destination="@id/Fragmenthome" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/Fragmentdone"
+        android:name="com.example.uaspads.Fragmentdone"
+        android:label="Fragmentdone">
+        <action
+            android:id="@+id/action_fragmentdone_to_fragmentaction"
+            app:destination="@id/fragmentaction">
+            <argument
+                android:name="taskId"
+                app:argType="integer" />
+        </action>
+        <action
+            android:id="@+id/action_fragmentdone_to_fragmenthome"
+            app:destination="@id/Fragmenthome">
+        </action>
+    </fragment>
+
+
+
+</navigation>
+
+
+

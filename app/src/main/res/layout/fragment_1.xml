@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Fragment1">
+
+    <Button
+        android:id="@+id/new_task_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:background="@color/new_task_color"
+        android:text="New"
+        android:textColor="@android:color/white"
+        android:textSize="18sp" />
+
+    <!-- Button for In Progress tasks -->
+    <Button
+        android:id="@+id/in_progress_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:background="@color/in_progress_color"
+        android:text="In Progress"
+        android:textColor="@android:color/white"
+        android:textSize="18sp" />
+
+    <!-- Button for Done tasks -->
+    <Button
+        android:id="@+id/done_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:background="@color/done_color"
+        android:text="Done"
+        android:textColor="@android:color/white"
+        android:textSize="18sp" />
+
+    <Button
+        android:id="@+id/add_task"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add Task"
+        android:layout_gravity="center_horizontal" />
+
+</LinearLayout>
